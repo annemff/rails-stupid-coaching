@@ -1,0 +1,25 @@
+<!-- app/views/questions/ask.html.erb -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stupid coach</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Ask the Coach</h1>
+  <form action="/answer" method="get">
+    <input class=input type="text" name="question" placeholder="Your question goes here">
+    <input class=btn type="submit" value="ask">
+  </form>
+
+  <%= yield %>
+
+</body>
+</html>
+

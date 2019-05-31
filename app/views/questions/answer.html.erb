@@ -1,0 +1,30 @@
+<!-- app/views/questions/ask.html.erb -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stupid coach</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Stupid Coaching</h1> <!-- Add this -->
+  <%= yield %>
+  <div class="box">
+  <div class="boxq">
+  <p> <strong><%= @question %></strong></p>
+  <p> <em>-You</em></p>
+</div>
+  <div class="boxa">
+  <p> <strong><%= @answer %></strong></p>
+  <p> <em>-Your Coach</em></p>
+  </div>
+  </div>
+  <%= link_to "More questions?", ask_path %>
+</body>
+</html>
+
